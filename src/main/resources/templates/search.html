@@ -37,13 +37,15 @@
     <hr />
 
     <!--// accept arraylist jobs and loop through each hashmap in turn to generate a table for each
-
     th:each syntax//-->
-    <table>
-        <tr th:each="job : ${jobs}">
-            <td th:text = "${job.name}"> Test</td>
+
+    <table th:each="job : ${jobs}">
+        <tr th:each = "field : ${job}">
+            <td th:text="${field.key}"></td>
+            <td th:text="${field.value}"></td>
         </tr>
     </table>
+
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
 
 </div>
