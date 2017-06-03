@@ -39,7 +39,7 @@
     <!--// accept arraylist jobs and loop through each hashmap in turn to generate a table for each
     th:each syntax//-->
 
-    <table th:each="job : ${jobs}">
+    <table class="job-listing" th:each="job : ${jobs}">
         <tr th:each = "field : ${job}">
             <td th:text="${field.key}"></td>
             <td th:text="${field.value}"></td>
