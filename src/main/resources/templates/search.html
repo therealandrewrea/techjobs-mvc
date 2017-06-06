@@ -4,6 +4,8 @@
 </head>
 <body>
 
+<!-- why in the fuck doesn't this load like the demo? -->
+
 <div th:replace="fragments :: page-header"></div>
 
 <div class="container body-content">
@@ -23,7 +25,6 @@
                         th:checked="${column.key == 'all'}"/>
                 <label th:for="${column.key}" th:text="${column.value}"></label>
             </span>
-
         </p>
 
         <p>
@@ -32,19 +33,16 @@
         </p>
 
         <input type="submit" value="Search" />
-    </form>
-
-    <hr />
-
-    <!--// accept arraylist jobs and loop through each hashmap in turn to generate a table for each
-    th:each syntax//-->
 
     <table class="job-listing" th:each="job : ${jobs}">
+        <!-- insert number of results -->
         <tr th:each = "field : ${job}">
             <td th:text="${field.key}"></td>
             <td th:text="${field.value}"></td>
         </tr>
     </table>
+    </form>
+
 
 </div>
 
