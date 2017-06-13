@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<!-- why in the fuck doesn't this load like the demo? -->
+<!-- why in the fuck doesn't this load like the demo? Where to control if the radio buttons appear -->
 
 <div th:replace="fragments :: page-header"></div>
 
@@ -35,7 +35,7 @@
         <input type="submit" value="Search" />
 
     <table class="job-listing" th:each="job : ${jobs}">
-        <!-- insert number of results -->
+        <!-- I guess check th:if syntax -->
         <tr th:each = "field : ${job}">
             <td th:text="${field.key}"></td>
             <td th:text="${field.value}"></td>
